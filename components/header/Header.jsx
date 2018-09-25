@@ -69,7 +69,7 @@ export class Header extends Component {
         <HeaderAppName>Pugzy</HeaderAppName>
         <HeaderNav>
           <HeaderNavItem>Explore</HeaderNavItem>
-          <HeaderNavItem disabled>Boards</HeaderNavItem>
+          <HeaderNavItem disabled>Galleries</HeaderNavItem>
           <HeaderNavItem disabled>Artists</HeaderNavItem>
           <HeaderNavItem disabled>Trending</HeaderNavItem>
         </HeaderNav>
