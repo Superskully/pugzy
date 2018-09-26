@@ -23,7 +23,7 @@ const WrapperBackground = styled.div`
     background: ${props => `url(${props.background}) no-repeat top center`};
     background-size: cover;
 
-    box-shadow: inset 0px 160px 280px 50px rgba(0,0,0,0.65);
+    box-shadow: inset 0px 50px 280px 30px rgba(0,0,0,0.9);
 
     cursor: pointer;
 `
@@ -46,7 +46,7 @@ const CardDesc = styled.p`
 
 const CardMeta = styled.div`
     display: flex;
-    justify-content: ;
+    justify-content: space-between;
 
     width: 100%;
     height: 40px;
@@ -54,17 +54,16 @@ const CardMeta = styled.div`
     border-radius: 0 0 5px 5px;
     border: 1px solid #eee;
 
-    color: #fff;
-    font-size: 16px;
+    color: #aaa;
+    font-size: 12px;
 
     line-height: 40px;
     padding: 0 15px;
+
 `
 
 const CardMetaAuthor = styled.span`
-    flex-grow: 1;
-    color: #aaa;
-    font-size: 12px;
+    color: #F4ACB7;
 `
 
 const CardMetaLikes = styled.span`
@@ -80,7 +79,7 @@ export const BookCard = (props) => {
                 <CardDesc><span dangerouslySetInnerHTML={{__html: props.desc}}/></CardDesc>
             </WrapperBackground>
             <CardMeta>
-                <CardMetaAuthor>by {props.author}</CardMetaAuthor>
+                <span>by <CardMetaAuthor>{props.author}</CardMetaAuthor></span>
                 <CardMetaLikes>{props.likes} ♡</CardMetaLikes>
             </CardMeta>
         </Wrapper>

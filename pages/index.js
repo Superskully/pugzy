@@ -25,9 +25,9 @@ const TEMP_DATA = [
         author: "Tom Lelan"
     },
     {
-        title: "Stendhal Syndrome",
-        desc: "Alejandro Jodorowsky Universe",
-        background: "https://www.versatile-mag.fr/wp-content/uploads/2016/11/jodorowsky-A4-new-FIN-HD.jpg",
+        title: "Dans l'oeil d'Escher",
+        desc: "Impossible objects, explorations of infinity, reflection, symmetry, perspective.",
+        background: "https://www.nationalgalleries.org/sites/default/files/styles/thumbnail/public/exhibitions/TeaserEscher.jpg",
         author: "Alt236"
     },
     {
@@ -50,6 +50,7 @@ const Index = () => (
         <WrapperOut>
             <Title1>Trending</Title1>
             {TEMP_DATA.map(i => <BookCard key={i.title} title={i.title} desc={i.desc} background={i.background} author={i.author} likes={Math.floor(Math.random() * 1000) + 1  }/>)}
+            <Title1>What's new</Title1>
         </WrapperOut>
     </Page>
 )
