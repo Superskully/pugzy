@@ -65,7 +65,6 @@ export class Header extends Component {
     return (
     <HeaderWrapper>
       <HeaderInside>
-        {/* <HeaderLogo src={logo} alt="logo" /> */}
         <HeaderAppName>Pugzy</HeaderAppName>
         <HeaderNav>
           <HeaderNavItem>Galleries</HeaderNavItem>

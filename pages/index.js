@@ -1,4 +1,4 @@
-// import Link from 'next/link'
+import { Link } from '../routes'
 
 //import 'typeface-spectral'
 //import 'typeface-karla'
@@ -6,16 +6,11 @@ import 'normalize.css'
 
 import '../assets/index.css'
 
-import { WrapperOut } from '../components/utils/Wrapper'
+import { LayoutWrappedOut } from '../components/layout/Layout'
 import { Title1 } from '../components/utils/Title'
 import { BookCard } from '../components/utils/Card'
-import Header from '../components/header/Header'
 
 import styled from 'styled-components'
-
-const Page = styled.div`
-  min-width: 960px;
-`
 
 const TEMP_DATA = [
     {
@@ -45,14 +40,25 @@ const TEMP_DATA = [
 ]
 
 const Index = () => (
-    <Page>
-        <Header />
-        <WrapperOut>
-            <Title1>Trending</Title1>
-            {TEMP_DATA.map(i => <BookCard key={i.title} title={i.title} desc={i.desc} background={i.background} author={i.author} likes={Math.floor(Math.random() * 1000) + 1  }/>)}
-            <Title1>What's new</Title1>
-        </WrapperOut>
-    </Page>
+    <LayoutWrappedOut>
+        <Title1>Trending</Title1>
+            {TEMP_DATA.map(i => 
+                <Link
+                    key={i.title}
+                    route={'artwork'}
+                    params={{slug: 'hello-world', id: 2}}
+                >
+                    <BookCard
+                        title={i.title}
+                        desc={i.desc}
+                        background={i.background}
+                        author={i.author}
+                        likes={Math.floor(Math.random() * 1000) + 1}
+                    />
+                </Link>
+            )}
+        <Title1>What's new</Title1>
+    </LayoutWrappedOut>
 )
   
 export default Index
