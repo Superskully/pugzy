@@ -21,7 +21,7 @@ const WrapperBackground = styled.div`
     background: ${props => `url(${props.background}) no-repeat top center`};
     background-size: cover;
 
-    box-shadow: inset 0px 50px 180px 30px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 50px 180px 30px rgba(0, 0, 0, 0.6);
 
     cursor: pointer;
 `
@@ -30,7 +30,7 @@ const WrapperGradient = styled.div`
     width: 100%;
     height: 100%;
     padding: 30px 25px 20px 30px;
-    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
 `
 
 const CardTitle = styled.p`

@@ -68,8 +68,7 @@ export class Header extends Component {
         {/* <HeaderLogo src={logo} alt="logo" /> */}
         <HeaderAppName>Pugzy</HeaderAppName>
         <HeaderNav>
-          <HeaderNavItem>Explore</HeaderNavItem>
-          <HeaderNavItem disabled>Galleries</HeaderNavItem>
+          <HeaderNavItem>Galleries</HeaderNavItem>
           <HeaderNavItem disabled>Artists</HeaderNavItem>
           <HeaderNavItem disabled>Trending</HeaderNavItem>
         </HeaderNav>
