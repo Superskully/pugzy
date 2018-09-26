@@ -19,9 +19,9 @@ const Page = styled.div`
 
 const TEMP_DATA = [
     {
-        title: "Refik Anadol",
-        desc: "A technology-driven artist. <br/><br/>Embedding media arts into architecture, he questions the possibility of a post digital architectural future in which there are no more non-digital realities.",
-        background: "https://i1.wp.com/trendland.com/wp-content/uploads/2018/04/refik-anadol-data-art-melting-memories-2.jpg?fit=1724%2C1150&ssl=1",
+        title: "Lovecraft's Legacy",
+        desc: "Maybe the most influential horror writer of the 20th century. </br> </br> He was a pioneer of ‘open content’ and shared world works, by not jealousy guarding his creations but allowing and encouraging other writers to use elements of his work.",
+        background: "http://1.bp.blogspot.com/-XU-D8en6CbE/TtUJUqiyLJI/AAAAAAAACv4/J9podUqR3DI/s1600/29.11.11.jpg",
         author: "Tom Lelan"
     },
     {
@@ -31,10 +31,10 @@ const TEMP_DATA = [
         author: "Alt236"
     },
     {
-        title: "TeamLab",
-        desc: "Where art meet science",
-        background: "https://www.sessions.edu/wp-content/uploads/13409.jpg",
-        author: "Artjaws"
+        title: "Refik Anadol",
+        desc: "A technology-driven artist. <br/><br/>Embedding media arts into architecture, he questions the possibility of a post digital architectural future in which there are no more non-digital realities.",
+        background: "https://i1.wp.com/trendland.com/wp-content/uploads/2018/04/refik-anadol-data-art-melting-memories-2.jpg?fit=1724%2C1150&ssl=1",
+        author: "Max"
     },
     {
         title: "Summer of love",

@@ -4,13 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "dev:server": "npm run build && node server.js",
-    "prod:server": "npm run build && NODE_ENV=production node server.js",
-    "package": "npm run build && serverless package --verbose",
-    "deploy": "npm run package && serverless deploy"
+    "start": "NODE_ENV=production node server.js"
   },
   "keywords": [],
   "author": "",
@@ -20,11 +16,11 @@
     "babel-plugin-inline-react-svg": "^0.5.4",
     "express": "^4.16.3",
     "next": "^7.0.0",
+    "next-routes": "^1.4.2",
     "normalize.css": "^8.0.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-redux": "^5.0.7",
-    "serverless-http": "^1.6.0",
     "styled-components": "^3.4.9",
     "typeface-karla": "0.0.54",
     "typeface-spectral": "0.0.54",

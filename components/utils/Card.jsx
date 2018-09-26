@@ -14,8 +14,6 @@ const WrapperBackground = styled.div`
     width: 100%;
     height: 500px;
 
-    padding: 30px 25px 20px 30px;
-    
     :last-child {
         margin: 0 0 15px 0;
     }
@@ -23,10 +21,18 @@ const WrapperBackground = styled.div`
     background: ${props => `url(${props.background}) no-repeat top center`};
     background-size: cover;
 
-    box-shadow: inset 0px 50px 280px 30px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 50px 180px 30px rgba(0, 0, 0, 0.7);
 
     cursor: pointer;
 `
+
+const WrapperGradient = styled.div`
+    width: 100%;
+    height: 100%;
+    padding: 30px 25px 20px 30px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
+`
+
 const CardTitle = styled.p`
     margin: 0;
     color: #fff;
@@ -75,8 +81,10 @@ export const BookCard = (props) => {
     return(
         <Wrapper>
             <WrapperBackground background={props.background}>
-                <CardTitle>{props.title}</CardTitle>
-                <CardDesc><span dangerouslySetInnerHTML={{__html: props.desc}}/></CardDesc>
+                <WrapperGradient>
+                    <CardTitle>{props.title}</CardTitle>
+                    <CardDesc><span dangerouslySetInnerHTML={{__html: props.desc}}/></CardDesc>
+                </WrapperGradient>
             </WrapperBackground>
             <CardMeta>
                 <span>by <CardMetaAuthor>{props.author}</CardMetaAuthor></span>
