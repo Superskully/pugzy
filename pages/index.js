@@ -45,16 +45,18 @@ const Index = () => (
             {TEMP_DATA.map(i => 
                 <Link
                     key={i.title}
-                    route={'artwork'}
+                    route='artwork'
                     params={{slug: 'hello-world', id: 2}}
                 >
-                    <BookCard
-                        title={i.title}
-                        desc={i.desc}
-                        background={i.background}
-                        author={i.author}
-                        likes={Math.floor(Math.random() * 1000) + 1}
-                    />
+                    <a>
+                        <BookCard
+                            title={i.title}
+                            desc={i.desc}
+                            background={i.background}
+                            author={i.author}
+                            likes={Math.floor(Math.random() * 1000) + 1}
+                        />
+                    </a>
                 </Link>
             )}
         <Title1>What's new</Title1>

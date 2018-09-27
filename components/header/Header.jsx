@@ -1,3 +1,4 @@
+import { Link } from '../../routes'
 import { Button } from '../utils/Button'
 
 import styled, { css } from 'styled-components'
@@ -65,7 +66,9 @@ export class Header extends Component {
     return (
     <HeaderWrapper>
       <HeaderInside>
-        <HeaderAppName>Pugzy</HeaderAppName>
+        <Link route='home'>
+          <HeaderAppName>Pugzy</HeaderAppName>
+        </Link>
         <HeaderNav>
           <HeaderNavItem>Galleries</HeaderNavItem>
           <HeaderNavItem disabled>Artists</HeaderNavItem>
