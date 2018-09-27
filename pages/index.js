@@ -1,11 +1,5 @@
 import { Link } from '../routes'
 
-//import 'typeface-spectral'
-//import 'typeface-karla'
-import 'normalize.css'
-
-import '../assets/index.css'
-
 import { LayoutWrappedOut } from '../components/layout/Layout'
 import { Title1 } from '../components/utils/Title'
 import { BookCard } from '../components/utils/Card'
