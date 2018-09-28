@@ -5,8 +5,13 @@ const Wrapper = styled.div`
 
     width: 290px;
     margin: 0 10px 15px 0;
-
     vertical-align: bottom;
+
+    transition: box-shadow .3s;
+
+    :hover {
+        box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+    }
 `
 
 const WrapperBackground = styled.div`

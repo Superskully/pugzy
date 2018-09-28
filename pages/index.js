@@ -1,6 +1,9 @@
 import { Link } from '../routes'
+import React, { Component } from 'react'
 
 import { LayoutWrappedOut } from '../components/layout/Layout'
+import Hero from '../components/hero/Hero'
+
 import { Title1 } from '../components/utils/Title'
 import { BookCard } from '../components/utils/Card'
 
@@ -33,29 +36,34 @@ const TEMP_DATA = [
     }
 ]
 
-const Index = () => (
-    <LayoutWrappedOut>
-        <Title1>Trending</Title1>
-            {TEMP_DATA.map(i => 
-                <Link
-                    key={i.title}
-                    route='artwork'
-                    params={{slug: 'hello-world', id: 2}}
-                >
-                    <a>
-                        <BookCard
-                            title={i.title}
-                            desc={i.desc}
-                            background={i.background}
-                            author={i.author}
-                            likes={Math.floor(Math.random() * 1000) + 1}
-                        />
-                    </a>
-                </Link>
-            )}
-        <Title1>What's new</Title1>
-    </LayoutWrappedOut>
-)
+export class Index extends Component {
+    render() {
+        return (
+            <LayoutWrappedOut>
+                <Hero />
+                <Title1>Curated by members</Title1>
+                {TEMP_DATA.map(i => 
+                    <Link
+                        key={i.title}
+                        route='artwork'
+                        params={{slug: 'hello-world', id: 2}}
+                    >
+                        <a>
+                            <BookCard
+                                title={i.title}
+                                desc={i.desc}
+                                background={i.background}
+                                author={i.author}
+                                likes={Math.floor(Math.random() * 1000) + 1}
+                            />
+                        </a>
+                    </Link>
+                )}
+                <Title1>What's new</Title1>
+            </LayoutWrappedOut>
+        )
+    }
+}
   
 export default Index
 

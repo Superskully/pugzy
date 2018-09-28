@@ -1,5 +1,5 @@
 import { Link } from '../../routes'
-import { Button } from '../utils/Button'
+import { Button } from '../utils/Button'
 
 import styled, { css } from 'styled-components'
 import React, { Component } from 'react'
