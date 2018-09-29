@@ -13,6 +13,14 @@ export const Button = styled.button`
     
     cursor: pointer;
 
+    :first-child {
+        margin-left: 0;
+    }
+    
+    :last-child {
+        margin-right: 0;
+    }
+
     ${props => props.variant && css`
         color: #F4ACB7;
         border: 1px solid #F4ACB7;

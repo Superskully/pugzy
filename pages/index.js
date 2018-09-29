@@ -1,8 +1,11 @@
 import { Link } from '../routes'
 import React, { Component } from 'react'
 
-import { LayoutWrappedOut } from '../components/layout/Layout'
+import { Layout } from '../components/layout/Layout'
+import { WrapperOut } from '../components/utils/Wrapper'
+
 import Hero from '../components/hero/Hero'
+import CTA from '../components/cta/CTA'
 
 import { Title1 } from '../components/utils/Title'
 import { BookCard } from '../components/utils/Card'
@@ -36,31 +39,38 @@ const TEMP_DATA = [
     }
 ]
 
+const GalleriesWrapper = styled.div`
+    margin-top: -50px;
+`
+
 export class Index extends Component {
     render() {
         return (
-            <LayoutWrappedOut>
+            <Layout>
                 <Hero />
-                <Title1>Curated by members</Title1>
-                {TEMP_DATA.map(i => 
-                    <Link
-                        key={i.title}
-                        route='artwork'
-                        params={{slug: 'hello-world', id: 2}}
-                    >
-                        <a>
-                            <BookCard
-                                title={i.title}
-                                desc={i.desc}
-                                background={i.background}
-                                author={i.author}
-                                likes={Math.floor(Math.random() * 1000) + 1}
-                            />
-                        </a>
-                    </Link>
-                )}
-                <Title1>What's new</Title1>
-            </LayoutWrappedOut>
+                <WrapperOut>
+                    <GalleriesWrapper>
+                        {TEMP_DATA.map(i => 
+                            <Link
+                                key={i.title}
+                                route='artwork'
+                                params={{slug: 'hello-world', id: 2}}
+                            >
+                                <a>
+                                    <BookCard
+                                        title={i.title}
+                                        desc={i.desc}
+                                        background={i.background}
+                                        author={i.author}
+                                        likes={Math.floor(Math.random() * 1000) + 1}
+                                    />
+                                </a>
+                            </Link>
+                        )}
+                    </GalleriesWrapper>
+                    <CTA />
+                </WrapperOut>
+            </Layout>
         )
     }
 }

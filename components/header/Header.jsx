@@ -71,8 +71,8 @@ export class Header extends Component {
         </Link>
         <HeaderNav>
           <HeaderNavItem>Galleries</HeaderNavItem>
+          <HeaderNavItem disabled>Search</HeaderNavItem>
           <HeaderNavItem disabled>Artists</HeaderNavItem>
-          <HeaderNavItem disabled>Trending</HeaderNavItem>
         </HeaderNav>
         <div>
           <Button>Login</Button>

@@ -4,7 +4,7 @@ const Wrapper = styled.div`
     display: inline-block;
 
     width: 290px;
-    margin: 0 10px 15px 0;
+    margin: 0 5px 15px 5px;
     vertical-align: bottom;
 
     transition: box-shadow .3s;
@@ -70,7 +70,6 @@ const CardMeta = styled.div`
 
     line-height: 40px;
     padding: 0 15px;
-
 `
 
 const CardMetaAuthor = styled.span`
