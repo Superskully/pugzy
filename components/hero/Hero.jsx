@@ -33,7 +33,7 @@ const SearchWrapper = styled.div`
     padding: 4px;
 
     border-radius: 25px;
-    border: 1px solid #eee;
+    border: 1px solid ${props => props.theme.lightGrey};
 `
 
 const SearchInput = styled.input`

@@ -8,7 +8,7 @@ import Hero from '../components/hero/Hero'
 import CTA from '../components/cta/CTA'
 
 import { Title1 } from '../components/utils/Title'
-import { BookCard } from '../components/utils/Card'
+import { GalleryCard } from '../components/utils/Card'
 
 import styled from 'styled-components'
 
@@ -59,7 +59,7 @@ export class Index extends Component {
                                 params={{slug: 'hello-world', id: 2}}
                             >
                                 <a>
-                                    <BookCard
+                                    <GalleryCard
                                         title={i.title}
                                         desc={i.desc}
                                         background={i.background}

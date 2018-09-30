@@ -42,7 +42,7 @@ const CardTitle = styled.p`
     margin: 0;
     color: #fff;
     font-size: 36px;
-    font-family: 'Spectral', 'Helvetica Neue', Arial, sans-serif;
+    font-family: ${props => props.theme.serifFont};
     font-weight: 700;
 `
 const CardDesc = styled.p`
@@ -63,9 +63,9 @@ const CardMeta = styled.div`
     height: 40px;
     background-color: #fff;
     border-radius: 0 0 5px 5px;
-    border: 1px solid #eee;
+    border: 1px solid ${props => props.theme.lightGrey};
 
-    color: #aaa;
+    color: ${props => props.theme.grey};
     font-size: 12px;
 
     line-height: 40px;
@@ -73,15 +73,15 @@ const CardMeta = styled.div`
 `
 
 const CardMetaAuthor = styled.span`
-    color: #F4ACB7;
+    color: ${props => props.theme.primary};
 `
 
 const CardMetaLikes = styled.span`
-    color: #aaa;
+    color: ${props => props.theme.grey};
     font-size: 12px;
 `
 
-export const BookCard = (props) => {
+export const GalleryCard = (props) => {
     return(
         <Wrapper>
             <WrapperBackground background={props.background}>

@@ -8,7 +8,7 @@ const HeaderWrapper = styled.header`
   height: 66px;
   width: 100%;
   padding: 0 20px;
-  border-bottom: 1px solid #e9e9e9;
+  border-bottom: 1px solid ${props => props.theme.lightGrey};
 `
 
 const HeaderInside = styled.div`
@@ -31,7 +31,7 @@ const HeaderAppName = styled.h1`
   margin-right: 60px;
   font-weight: 300;
   font-size: 24px;
-  font-family: 'Spectral', 'Helvetica Neue', Arial, sans-serif;
+  font-family: ${props => props.theme.serifFont};
 `
 
 const HeaderNav = styled.nav`
@@ -43,20 +43,20 @@ const HeaderNavItem = styled.nav`
   margin: 0 25px 0 0;
 
   font-size: 16px;
-  color: #999;
+  color: ${props => props.theme.grey};
   font-weight: 300;
   cursor: pointer;
 
   transition: color 300ms linear;
 
   &:hover {
-    color: #F4ACB7;
+    color: ${props => props.theme.primary};
   }
 
   ${props => props.disabled && css`
-    color: #e9e9e9;
+    color: ${props => props.theme.lightGrey};
     &:hover {
-      color: #e9e9e9;
+      color: ${props => props.theme.lightGrey};
     }
   `}
 `

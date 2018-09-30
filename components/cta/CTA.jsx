@@ -12,22 +12,25 @@ const CTAWrapper = styled.section`
 
     background-color: #E8EBE4;
 `
-const Text = styled.span`
-    display: block;
-    font-family: 'Spectral', 'Helvetica Neue', Arial, sans-serif;
+const Text = styled.p`
+    font-family: ${props => props.theme.serifFont};
 
     font-size: 28px;
-    margin: 0 auto 30px;
+    margin: 0 auto 10px;
+    
 `
 const ButtonWrapper = styled.div`
+    margin-top: 15px;
 `
 
 const CTA = () => (
     <CTAWrapper>
-        <Text>Discover artists. <br/> Build collection.<br/>  Find inspiration.</Text>
+        <Text>Discover artists.</Text>
+        <Text>Build collection.</Text>
+        <Text>Find inspiration.</Text>
         <ButtonWrapper>
-            <Button big primary>Join us</Button>
-            <Button big>Our vision</Button>
+            <Button big primary variant>Join us</Button>
+            <Button big variant>Our vision</Button>
         </ButtonWrapper>
     </CTAWrapper>
 )
