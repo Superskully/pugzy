@@ -1,4 +1,5 @@
 import { Button } from '../utils/Button'
+import { WrapperOut } from '../utils/Wrapper'
 
 import styled, { css } from 'styled-components'
 import React, { Component } from 'react'
@@ -8,57 +9,66 @@ const HeroWrapper = styled.section`
     height: 410px;
     width: 100%;
     padding: 70px 0 0;
-
 `
 
 const BigText = styled.span`
     display: block;
-    
     font-size: 48px;
     font-family: 'Spectral', 'Helvetica Neue', Arial, sans-serif;
-    text-align: center;
-
-    margin: 0 auto 20px;
+    margin: 0 0 20px;
 `
 
 const MidText = styled.span`
     display: block;
-    
-    font-size: 20px;
-    text-align: center;
-
-    margin: 0 auto 50px;
+    font-size: 18px;
+    margin: 0 0 50px;
 `
 
 const SearchWrapper = styled.div`
     display: flex;
-    
+    justify-content: space-between;
+
     width: 600px;
-    height: 60px;
+    height: 54px;
+    padding: 4px;
 
-    border-radius: 30px;
+    border-radius: 25px;
     border: 1px solid #eee;
-
-    margin: 0 auto;
 `
 
 const SearchInput = styled.input`
+    flex-grow: 1;
+    margin: 0 15px;
     border: none;
+    border-radius: 23px;
+    outline: 0;
+    caret-color: #F4ACB7;
 `
 
 const SearchSubmit = styled.button`
+    display: inline;
+    padding: 0 25px;
 
+    background-color: #F4ACB7;
+    color: #fff;
+
+    height: 44px;
+    
+    border-radius: 22px;
+    border: 0;
 `
 
 
 const Hero = () => (
     <HeroWrapper>
-        <BigText>Where art thrives</BigText>
-        <MidText>Pugzy will help you organize the way you enjoy art, broading your inspirations.</MidText>
-        {/* <SearchWrapper>
-            <SearchInput />
-            <SearchSubmit>Search</SearchSubmit>
-        </SearchWrapper> */}
+        <WrapperOut>
+            <BigText>Where art thrives</BigText>
+            <MidText>Pugzy will help you organize the way you enjoy art, broading your inspirations.</MidText>
+            <SearchWrapper>
+                <SearchInput />
+                <SearchSubmit>Explore</SearchSubmit>
+            </SearchWrapper>
+        </WrapperOut>
     </HeroWrapper>
 )
 

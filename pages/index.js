@@ -47,7 +47,9 @@ export class Index extends Component {
     render() {
         return (
             <Layout>
-                <Hero />
+                <Hero
+                    onSearch={() => {}}
+                />
                 <WrapperOut>
                     <GalleriesWrapper>
                         {TEMP_DATA.map(i => 
