@@ -5,69 +5,39 @@ import styled, { css } from 'styled-components'
 import React, { Component } from 'react'
 
 const HeroWrapper = styled.section`
+    z-index: -1;
+    
     position: relative;
-    height: 410px;
+    height: 400px;
     width: 100%;
     padding: 70px 0 0;
+
+    background: url('/static/home_bg.png') no-repeat top right;
 `
 
-const BigText = styled.span`
-    display: block;
+const BigText = styled.p`
+    display: inline-block;
     font-size: 48px;
     font-family: ${props => props.theme.serifFont};
     margin: 0 0 20px;
+    padding: 2px 10px 2px 0;
+    background-color: #fff;
 `
 
-const MidText = styled.span`
-    display: block;
+const MidText = styled.p`
+    display: inline-block;
     font-size: 18px;
     margin: 0 0 50px;
+    padding: 2px 10px 2px 0;
+    background-color: #fff;
 `
-
-const SearchWrapper = styled.div`
-    display: flex;
-    justify-content: space-between;
-
-    width: 600px;
-    height: 54px;
-    padding: 4px;
-
-    border-radius: 25px;
-    border: 1px solid ${props => props.theme.lightGrey};
-`
-
-const SearchInput = styled.input`
-    flex-grow: 1;
-    margin: 0 15px;
-    border: none;
-    border-radius: 23px;
-    outline: 0;
-    caret-color: ${props => props.theme.primary};
-`
-
-const SearchSubmit = styled.button`
-    display: inline;
-    padding: 0 25px;
-
-    background-color: ${props => props.theme.primary};
-    color: #fff;
-
-    height: 44px;
-    
-    border-radius: 22px;
-    border: 0;
-`
-
 
 const Hero = () => (
     <HeroWrapper>
         <WrapperOut>
             <BigText>Where art thrives</BigText>
+            <br/>
             <MidText>Pugzy will help you organize the way you enjoy art, broading your inspirations.</MidText>
-            <SearchWrapper>
-                <SearchInput />
-                <SearchSubmit>Explore</SearchSubmit>
-            </SearchWrapper>
         </WrapperOut>
     </HeroWrapper>
 )

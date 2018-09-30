@@ -66,7 +66,7 @@ export class Header extends Component {
     return (
     <HeaderWrapper>
       <HeaderInside>
-        <Link route='home'>
+        <Link route='/'>
           <HeaderAppName>Pugzy</HeaderAppName>
         </Link>
         <HeaderNav>

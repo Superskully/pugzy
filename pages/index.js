@@ -1,4 +1,4 @@
-import { Link } from '../routes'
+import { Link, Router } from '../routes'
 import React, { Component } from 'react'
 
 import { Layout } from '../components/layout/Layout'
@@ -6,6 +6,7 @@ import { WrapperOut } from '../components/utils/Wrapper'
 
 import Hero from '../components/hero/Hero'
 import CTA from '../components/cta/CTA'
+import SearchBar from '../components/searchBar/SearchBar'
 
 import { Title1 } from '../components/utils/Title'
 import { GalleryCard } from '../components/utils/Card'
@@ -41,16 +42,25 @@ const TEMP_DATA = [
 
 const GalleriesWrapper = styled.div`
     margin-top: -50px;
+    display: flex;
+    transition: all 1s ease-out;
 `
 
 export class Index extends Component {
+
+    state = {
+        inSearch: false,
+    }
+
     render() {
         return (
             <Layout>
-                <Hero
-                    onSearch={() => {}}
-                />
+                <Hero />
                 <WrapperOut>
+                    <SearchBar
+                        inHero
+                        onSearchSubmit={query => Router.pushRoute('search', { query: 'ok' })}
+                    />
                     <GalleriesWrapper>
                         {TEMP_DATA.map(i => 
                             <Link
@@ -58,15 +68,13 @@ export class Index extends Component {
                                 route='artwork'
                                 params={{slug: 'hello-world', id: 2}}
                             >
-                                <a>
-                                    <GalleryCard
-                                        title={i.title}
-                                        desc={i.desc}
-                                        background={i.background}
-                                        author={i.author}
-                                        likes={Math.floor(Math.random() * 1000) + 1}
-                                    />
-                                </a>
+                                <GalleryCard
+                                    title={i.title}
+                                    desc={i.desc}
+                                    background={i.background}
+                                    author={i.author}
+                                    likes={Math.floor(Math.random() * 1000) + 1}
+                                />
                             </Link>
                         )}
                     </GalleriesWrapper>

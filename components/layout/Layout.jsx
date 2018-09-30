@@ -7,7 +7,7 @@ import 'normalize.css'
 import '../../assets/index.css'
 
 const Page = styled.div`
-  min-width: 960px;
+    min-width: 960px;
 `
 
 export const Layout = (props) => (
