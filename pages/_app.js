@@ -1,6 +1,9 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 
+import { ThemeProvider } from 'styled-components'
+import { primaryTheme } from '../assets/globalStyle'
+
 export default class MyApp extends App {
     static async getInitialProps({ Component, router, ctx }) {
         let pageProps = {}
@@ -16,7 +19,9 @@ export default class MyApp extends App {
 
         return (
             <Container>
-                <Component {...pageProps} />
+                <ThemeProvider theme={primaryTheme}>
+                    <Component {...pageProps} />
+                </ThemeProvider>
             </Container>
         )
     }

@@ -14,7 +14,7 @@ const HeroWrapper = styled.section`
 const BigText = styled.span`
     display: block;
     font-size: 48px;
-    font-family: 'Spectral', 'Helvetica Neue', Arial, sans-serif;
+    font-family: ${props => props.theme.serifFont};
     margin: 0 0 20px;
 `
 
@@ -42,14 +42,14 @@ const SearchInput = styled.input`
     border: none;
     border-radius: 23px;
     outline: 0;
-    caret-color: #F4ACB7;
+    caret-color: ${props => props.theme.primary};
 `
 
 const SearchSubmit = styled.button`
     display: inline;
     padding: 0 25px;
 
-    background-color: #F4ACB7;
+    background-color: ${props => props.theme.primary};
     color: #fff;
 
     height: 44px;

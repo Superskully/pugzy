@@ -5,9 +5,10 @@ export const Button = styled.button`
     padding: 6px 15px;
     margin: 0 10px;
     background: transparent;
-    border: 1px solid #798071;
 
-    color: #798071;
+    border: 1px solid ${props => props.variant ? props.theme.secondary : props.theme.primary};
+    color: ${props => props.variant ? props.theme.secondary : props.theme.primary};
+
     font-size: 14px;
     vertical-align: baseline;
     
@@ -21,18 +22,8 @@ export const Button = styled.button`
         margin-right: 0;
     }
 
-    ${props => props.variant && css`
-        color: #F4ACB7;
-        border: 1px solid #F4ACB7;
-    `}
-
     ${props => props.primary && css`
-        background: #798071;
-        color: white;
-    `}
-
-    ${props => props.primary && props.variant && css`
-        background: #F4ACB7;
+        background: ${props => props.variant ? props.theme.secondary : props.theme.primary};
         color: white;
     `}
 
