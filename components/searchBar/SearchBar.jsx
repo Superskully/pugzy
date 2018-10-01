@@ -45,23 +45,51 @@ const SearchSubmit = styled.input`
     
     border-radius: 22px;
     border: 0;
+
+    :placeholder {
+        color: ${props => props.theme.lightGrey};
+    }
 `
 
+export class SearchBar extends Component {
 
-const SearchBar = (props) => (
-    <SearchWrapper {...props}>
-        <SearchForm
-            onSubmit={e => {
-                e.preventDefault()
-                props.onSearchSubmit('Ok')
-            }}
-            action="/page"
-            method="get"
-        >
-            <SearchInput />
-            <SearchSubmit type='submit' value='Explore' />
-        </SearchForm>
-    </SearchWrapper>
-)
+    state = {
+        value: ''
+    }
+
+    handleChange = event => {
+        this.setState({ value: event.target.value })
+    }
+
+    render() {
+        const { inHero, onSearchSubmit } = this.props
+        const { value } = this.state
+
+        return (
+            <SearchWrapper
+                inHero={inHero}
+            >
+                <SearchForm
+                    onSubmit={e => {
+                        e.preventDefault()
+                        onSearchSubmit(value)
+                    }}
+                    action="/page"
+                    method="get"
+                >
+                    <SearchInput
+                        onChange={this.handleChange}
+                        placeholder='Search'
+                        value={value}
+                    />
+                    <SearchSubmit
+                        type='submit'
+                        value='Explore'
+                    />
+                </SearchForm>
+            </SearchWrapper>
+        )
+    }
+}
 
 export default SearchBar
