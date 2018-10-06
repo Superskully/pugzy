@@ -50,6 +50,7 @@ export class Index extends Component {
                         )}
                     </GalleriesWrapper>
                     <CTA />
+                    <Title1>Most popular</Title1>
                 </WrapperOut>
             </Layout>
         )

@@ -8,28 +8,25 @@ const HeroWrapper = styled.section`
     z-index: -1;
     
     position: relative;
-    height: 400px;
+    height: 300px;
     width: 100%;
     padding: 70px 0 0;
 
-    background: url('/static/home_bg.png') no-repeat top right;
+    border-bottom: 1px solid ${props => props.theme.lightGrey};
+    background-size: cover;
 `
 
 const BigText = styled.p`
-    display: inline-block;
-    font-size: 48px;
+    font-size: 72px;
     font-family: ${props => props.theme.serifFont};
-    margin: 0 0 20px;
-    padding: 2px 10px 2px 0;
-    background-color: #fff;
+    margin: 0;
+    text-align: center;
 `
 
 const MidText = styled.p`
-    display: inline-block;
     font-size: 18px;
     margin: 0 0 50px;
-    padding: 2px 10px 2px 0;
-    background-color: #fff;
+    text-align: center;
 `
 
 const Hero = () => (

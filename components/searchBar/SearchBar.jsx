@@ -12,9 +12,7 @@ const SearchWrapper = styled.div`
     border-radius: 25px;
     border: 1px solid ${props => props.theme.lightGrey};
     background-color: #fff;
-
-    margin-top: ${props => props.inHero ? '-160px' : '20px' };
-    margin-bottom: ${props => props.inHero ? '115px' : '0' };
+    margin: ${props => props.inHero ? '-80px' : '20px' } auto ${props => props.inHero ? '115px' : '0' };
 
     transition: all 1s ease-out;
 `
