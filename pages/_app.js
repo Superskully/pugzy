@@ -34,7 +34,30 @@ const TEMP_DATA =
         }
     ],
     artworks: [
-
+        {
+            title: "Under the Wave off Kanagawa",
+            desc: "The breathtaking composition of this woodblock print, said to have inspired Debussy’s La Mer (The Sea) and Rilke’s Der Berg (The Mountain), ensures its reputation as an icon of world art.",
+            img: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/45434/134438/main-image",
+            author: "Katsushika Hokusai"
+        },
+        {
+            title: "The Beeches",
+            desc: "The painting illustrates a new trend in the work of the Hudson River School, with its diminished emphasis on sublime drama and increased interest in naturalism and in the creation of a tranquil mood.",
+            img: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/10786/33136/main-image",
+            author: "Asher Brown Durand"
+        },
+        {
+            title: "Sea Monsters HERE",
+            desc: "Twenty inflatable tentacles extend from the roof and several windows of a two-story warehouse in Philadelphia’s Navy Yard.",
+            img: "https://www.thisiscolossal.com/wp-content/uploads/2018/10/GroupXSeaMonstersHERE_03.jpg",
+            author: " Filthy Luker, Pedro Estrellas, Group X"
+        },
+        {
+            title: "The Gulf Stream",
+            desc: "A man faces his demise on a dismasted, rudderless fishing boat, sustained by only a few stalks of sugarcane and threatened by sharks and a distant waterspout.",
+            img: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/11122/34093/main-image",
+            author: "Winslow Homer"
+        }
     ]
 }
 

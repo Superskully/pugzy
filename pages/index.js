@@ -9,7 +9,8 @@ import CTA from '../components/cta/CTA'
 import SearchBar from '../components/searchBar/SearchBar'
 
 import { Title1 } from '../components/utils/Title'
-import { GalleryCard } from '../components/utils/Card'
+import { GalleryCard } from '../components/utils/GalleryCard'
+import { ArtworkCard } from '../components/utils/ArtworkCard'
 
 import styled from 'styled-components'
 
@@ -18,6 +19,26 @@ const GalleriesWrapper = styled.div`
     display: flex;
     transition: all 1s ease-out;
 `
+
+const FlexGrid = styled.div`
+    display: flex;
+    justify-content: space-between;
+`
+
+const FlexColumnBig = styled.div`
+    padding: 0 25px 0 0;
+    flex-shrink: 1;
+`
+
+const FlexColumnSmall = styled.div`
+    width: 300px;
+    flex-shrink: 0;
+`
+
+const ArtworksWrapper = styled.div`
+
+`
+
 
 export class Index extends Component {
 
@@ -49,8 +70,24 @@ export class Index extends Component {
                             </Link>
                         )}
                     </GalleriesWrapper>
-                    <CTA />
-                    <Title1>Most popular</Title1>
+                    <FlexGrid>
+                        <FlexColumnBig>
+                            <Title1>Trending</Title1>
+                            <ArtworksWrapper>
+                                {tempData.artworks.map(i => 
+                                    <ArtworkCard
+                                        title={i.title}
+                                        desc={i.desc}
+                                        img={i.img}
+                                        author={i.author}
+                                    />
+                                )}
+                            </ArtworksWrapper>
+                        </FlexColumnBig>
+                        <FlexColumnSmall>
+                            <CTA />
+                        </FlexColumnSmall>
+                    </FlexGrid>
                 </WrapperOut>
             </Layout>
         )
