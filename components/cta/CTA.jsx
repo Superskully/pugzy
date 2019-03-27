@@ -4,10 +4,9 @@ import styled, { css } from 'styled-components'
 import React, { Component } from 'react'
 
 const CTAWrapper = styled.section`
-    height: 210px;
     width: 100%;
 
-    margin: 20px auto;
+    margin: 20px auto 50px;
     padding: 20px;
 
     background-color: #E8EBE4;
@@ -17,10 +16,9 @@ const Text = styled.p`
 
     font-size: 28px;
     margin: 0 auto 10px;
-    
 `
 const ButtonWrapper = styled.div`
-    margin-top: 15px;
+    margin: 40px 0 10px;
 `
 
 const CTA = () => (

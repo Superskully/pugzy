@@ -1,6 +1,7 @@
 import { Link, Router } from '../routes'
 import React, { Component } from 'react'
 
+import { Button } from '../components/utils/Button'
 import { Layout } from '../components/layout/Layout'
 import { WrapperOut } from '../components/utils/Wrapper'
 
@@ -11,6 +12,7 @@ import SearchBar from '../components/searchBar/SearchBar'
 import { Title1 } from '../components/utils/Title'
 import { GalleryCard } from '../components/utils/GalleryCard'
 import { ArtworkCard } from '../components/utils/ArtworkCard'
+import { CuratorCard } from '../components/utils/CuratorCard'
 
 import styled from 'styled-components'
 
@@ -37,6 +39,13 @@ const FlexColumnSmall = styled.div`
 
 const ArtworksWrapper = styled.div`
 
+`
+
+const CuratorsWrapper = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 30px 0 0;
 `
 
 
@@ -86,6 +95,15 @@ export class Index extends Component {
                         </FlexColumnBig>
                         <FlexColumnSmall>
                             <CTA />
+                            <Title1>Top curators</Title1>
+                            <CuratorsWrapper>
+                                {tempData.curators.map(i => 
+                                    <CuratorCard
+                                        name={i.name}
+                                        img={i.img}
+                                    />
+                                )}
+                            </CuratorsWrapper>
                         </FlexColumnSmall>
                     </FlexGrid>
                 </WrapperOut>
